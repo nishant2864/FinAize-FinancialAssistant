@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Wallet, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -11,12 +11,14 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="p-2 bg-blue-600 rounded-lg">
-                <Wallet className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">FinanceBot</h3>
-              </div>
+                {/* Logo */}
+                <Link to="/" className="flex items-center">
+                  <img
+                    src={ "/FinAIze_Logo.png" }
+                    alt="FinAIze Logo"
+                    className="w-24 rounded-full transition-transform duration-300 hover:scale-105"
+                  />
+                </Link>
             </div>
             <p className="text-gray-300 mb-4">
               Your intelligent financial assistant providing personalized advice and helping you make smarter money decisions.

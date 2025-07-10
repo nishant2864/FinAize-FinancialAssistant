@@ -23,8 +23,14 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <div className="min-h-screen flex flex-col">
-          <Navigation />
+          <video src="/background.mp4" autoPlay muted loop playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"></video>
+          <div className="absolute top-0 left-0 w-full h-full bg-black/50 -z-10"></div>
+          <div className="bg-black text-white">
+          <Navigation/>
+          </div>
           <main className="flex-1">
+            <div className="absolute bg-black -z-10"/>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

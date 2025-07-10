@@ -30,14 +30,26 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* 🔹 Background Video */}
+        {/* <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          src='/background.mp4'
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"/> */}
+
+        {/* 🔹 Dark Overlay */}
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-black/50 -z-10"></div> */}
+
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Your Personal <span className="text-blue-600">Financial Assistant</span>
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Your Personal <span style={{ color: '#06d2dd' }}>Financial Assistant</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-neutral-300 mb-8">
             Get personalized financial advice, track your expenses, and make smarter money decisions with our AI-powered chatbot.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -56,7 +68,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16">
+      {/* <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose FinanceBot?</h2>
           <p className="text-lg text-gray-600">Powerful features to help you manage your finances better</p>
@@ -75,10 +87,10 @@ const Home = () => {
             </Card>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      {/* <section className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Take Control of Your Finances?</h2>
           <p className="text-xl mb-8">Join thousands of users who trust FinanceBot for their financial decisions</p>
@@ -88,7 +100,7 @@ const Home = () => {
             </Button>
           </NavLink>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
