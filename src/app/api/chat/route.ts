@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server'
 import prisma from '@/lib/db/prisma'
 import { verifyJWT } from '@/lib/auth/jwt'
 import OpenAI from 'openai'
@@ -12,7 +12,7 @@ const openai = new OpenAI({
     }
 })
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
     try {
         const token = req.cookies.get('token')?.value
         const user = await verifyJWT(token || '')
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
         // 2. Construct System Prompt
         const systemPrompt = `You are FinAIze, a smart, premium financial assistant.
     User Context:
-    - Recent Expenses: ${JSON.stringify(recentExpenses.map(e => ({ cat: e.category, amt: e.amount, date: e.date.toISOString().split('T')[0] })))}
+    - Recent Expenses: ${JSON.stringify(recentExpenses.map((e: { category: string; amount: number; date: Date }) => ({ cat: e.category, amt: e.amount, date: e.date.toISOString().split('T')[0] })))}
     
     Answer the user's question based on this data. Be concise, helpful, and friendly.
     If the user asks to save money, suggest specific tips.
@@ -50,8 +50,9 @@ export async function POST(req: Request) {
         let aiResponseText = ""
 
         if (process.env.OPENAI_API_KEY) {
+            console.log("Using API Key:", process.env.OPENAI_API_KEY ? "Present" : "Missing");
             const completion = await openai.chat.completions.create({
-                model: "gpt-4o-mini", // Cost effective
+                model: "openai/gpt-4o-mini", // OpenRouter requires 'provider/model' format
                 messages: [
                     { role: "system", content: systemPrompt },
                     { role: "user", content: message }
