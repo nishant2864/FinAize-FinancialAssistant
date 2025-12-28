@@ -15,7 +15,7 @@ export default function Home() {
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
                 {/* Video Background */}
-                <div className="absolute inset-0 z-0">
+                <div className="fixed inset-0 z-0">
                     <div className="absolute inset-0 bg-black/60 z-10" /> {/* Overlay for readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10" />
                     <video
@@ -65,7 +65,7 @@ export default function Home() {
                         className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
                     >
                         <Link href="/auth/register">
-                            <Button size="lg" className="w-full sm:w-auto text-base h-12 px-8 bg-blue-600 hover:bg-blue-500 text-white border-0 shadow-[0_0_20px_rgba(37,99,235,0.5)]">
+                            <Button size="lg" className="w-full sm:w-auto text-base h-12 px-8 bg-cyan-600 hover:bg-cyan-500 text-white border-0 shadow-[0_0_20px_rgba(37,99,235,0.5)]">
                                 Start for Free
                             </Button>
                         </Link>
@@ -79,8 +79,8 @@ export default function Home() {
             </section>
 
             {/* Features Grid */}
-            <section id="features" className="py-32 bg-black relative">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-900/50 to-transparent" />
+            <section id="features" className="py-32 relative">
+                <div className="absolute top-0 left-0 right-0 h-px " />
 
                 <div className="container px-4">
                     <motion.div
@@ -134,7 +134,7 @@ export default function Home() {
             </section>
 
             {/* Footer */}
-            <footer className="border-t border-white/10 bg-black pt-16 pb-8">
+            <footer className="relative z-10 border-t border-white/10 bg-black pt-16 pb-8">
                 <div className="container px-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-sm text-zinc-400">
                         <div>
@@ -174,7 +174,7 @@ export default function Home() {
                             <div className="h-5 w-5 rounded bg-cyan-600" />
                             <span className="font-bold text-lg text-white">FinAIze</span>
                         </div>
-                        <p className="text-xs text-zinc-600">© 2024 FinAIze Inc. All rights reserved.</p>
+                        <p className="text-xs text-zinc-600">© 2026 FinAIze Inc. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
