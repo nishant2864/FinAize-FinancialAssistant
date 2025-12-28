@@ -21,4 +21,16 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+
+# Secrets
+.env
+.env.local
+
+# Next.js
+.next
+out
+build
+
+# Misc
+.DS_Store
+*.pem
