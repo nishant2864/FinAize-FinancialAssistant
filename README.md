@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# FinAIze - AI Financial Assistant
 
-## Project info
+A futuristic, AI-powered personal financial assistant built with Next.js, PostgreSQL, and OpenAI.
 
-**URL**: https://lovable.dev/projects/2ab6e72a-3b0f-4dd5-9c09-4a66c4402002
+## Features
+- 📊 **Dashboard**: Track expenses, budgets, and savings goals.
+- 🤖 **AI Chatbot**: Get personalized financial advice and insights.
+- 🔐 **Secure Auth**: Custom JWT authentication with secure cookies.
+- 🎨 **Premium UI**: Dark mode, neon accents, and smooth animations using Tailwind CSS & ShadCN.
 
-## How can I edit this code?
+## Tech Stack
+- **Frontend**: Next.js (App Router), TypeScript, Tailwind CSS, Recharts, Framer Motion
+- **Backend**: Next.js API Routes
+- **Database**: PostgreSQL (via Docker), Prisma ORM
+- **AI**: OpenAI API
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
+- Node.js 18+
+- Docker & Docker Compose (for the database)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2ab6e72a-3b0f-4dd5-9c09-4a66c4402002) and start prompting.
+### Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+1.  **Clone & Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-**Use your preferred IDE**
+2.  **Setup Database**
+    Make sure Docker is running, then start the PostgreSQL container:
+    ```bash
+    docker compose up -d
+    ```
+    
+    Initialize the database schema:
+    ```bash
+    npx prisma db push
+    ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3.  **Environment Variables**
+    Create a `.env` file (or use the created one) and add your OpenAI Key:
+    ```env
+    DATABASE_URL="postgresql://postgres:password@localhost:5432/finaize?schema=public"
+    NEXTAUTH_SECRET="your-secret"
+    OPENAI_API_KEY="sk-..."
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+4.  **Run the App**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000)
 
-Follow these steps:
+## Project Structure
+- `src/app`: Application routes and pages.
+- `src/components`: Reusable UI components.
+- `src/lib`: Utilities (DB, Auth, AI helpers).
+- `prisma`: Database schema.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2ab6e72a-3b0f-4dd5-9c09-4a66c4402002) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## License
+MIT
