@@ -54,27 +54,21 @@ export function Contact() {
                     >
                         {[
                             {
-                                handle: "@FinAIze_App",
+                                handle: "Launching Soon...",
                                 platform: "Twitter",
                                 icon: Twitter,
                                 href: "#"
                             },
                             {
-                                handle: "/company/finaize",
+                                handle: "Launching Soon...",
                                 platform: "LinkedIn",
                                 icon: Linkedin,
                                 href: "#"
                             },
                             {
-                                handle: "@finaize_official",
+                                handle: "Launching Soon...",
                                 platform: "Instagram",
                                 icon: Instagram,
-                                href: "#"
-                            },
-                            {
-                                handle: "github.com/finaize",
-                                platform: "GitHub",
-                                icon: Github,
                                 href: "#"
                             },
                             {
