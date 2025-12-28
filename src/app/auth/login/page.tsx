@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardHeader, CardContent, CardDescription, CardFooter, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
+import Image from 'next/image'
 
 export default function LoginPage() {
     const router = useRouter()
@@ -41,6 +42,15 @@ export default function LoginPage() {
 
     return (
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            {/* Logo */}
+            <div className="absolute top-8 left-12 h-24 w-24 flex items-center justify-center z-50">
+                <Image
+                    src="/FinAIze_Logo.png"
+                    alt="FinAIze Logo"
+                    fill
+                    className="object-contain"
+                />
+            </div>
             {/* Video Background */}
             <div className="fixed inset-0 z-0">
                 <div className="absolute inset-0 bg-black/60 z-10" /> {/* Overlay for readability */}
@@ -119,8 +129,8 @@ export default function LoginPage() {
                                     className="h-14 px-10 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white text-lg transition-all shadow-[0_0_20px_rgba(8,145,178,0.3)] hover:shadow-[0_0_30px_rgba(8,145,178,0.5)]"
                                     disabled={loading}
                                 >
-                                {loading ? 'Logging in...' : 'Login'}
-                            </Button>
+                                    {loading ? 'Logging in...' : 'Login'}
+                                </Button>
                             </div>
                         </CardContent>
                     </Card>
