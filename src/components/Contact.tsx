@@ -87,7 +87,7 @@ export function Contact() {
                                     {item.handle}
                                 </span>
 
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-4 group-hover:scale-110 transition-transform duration-300">
                                     <span className="text-white font-bold tracking-wide">
                                         {item.platform}
                                     </span>
