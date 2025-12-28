@@ -2,9 +2,12 @@
 
 import Link from 'next/link'
 import { Navbar } from '@/components/Navbar'
+import { About } from '@/components/About'
+import { Contact } from '@/components/Contact'
 import { Button } from '@/components/ui/button'
-import { Zap, Shield, TrendingUp } from 'lucide-react'
+import { Zap, Shield, TrendingUp, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Home() {
     return (
@@ -65,12 +68,12 @@ export default function Home() {
                         className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
                     >
                         <Link href="/auth/register">
-                            <Button size="lg" className="w-full sm:w-auto text-base h-12 px-8 bg-cyan-600 hover:bg-cyan-500 text-white border-0 shadow-[0_0_20px_rgba(37,99,235,0.5)]">
-                                Start for Free
+                            <Button size="lg" className="h-14 px-8 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white text-lg transition-all shadow-[0_0_20px_rgba(8,145,178,0.3)] hover:shadow-[0_0_30px_rgba(8,145,178,0.5)]">
+                                Start for Free <ArrowRight className="ml-2 w-5 h-5" />
                             </Button>
                         </Link>
                         <Link href="#features">
-                            <Button size="lg" variant="outline" className="w-full sm:w-auto h-12 bg-white text-black hover:bg-zinc-200 border-0">
+                            <Button size="lg" variant="outline" className="h-14 px-8 rounded-full bg-white text-black hover:bg-zinc-200 border-0">
                                 Learn More
                             </Button>
                         </Link>
@@ -133,50 +136,15 @@ export default function Home() {
                 </div>
             </section>
 
+            <About />
+            <Contact />
+
             {/* Footer */}
-            <footer className="relative z-10 border-t border-white/10 bg-black pt-16 pb-8">
-                <div className="container px-4">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-sm text-zinc-400">
-                        <div>
-                            <h4 className="font-bold text-white mb-4">Product</h4>
-                            <ul className="space-y-2">
-                                <li>Features</li>
-                                <li>Pricing</li>
-                                <li>Security</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-white mb-4">Company</h4>
-                            <ul className="space-y-2">
-                                <li>About</li>
-                                <li>Careers</li>
-                                <li>Contact</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-white mb-4">Legal</h4>
-                            <ul className="space-y-2">
-                                <li>Privacy</li>
-                                <li>Terms</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-white mb-4">Social</h4>
-                            <ul className="space-y-2">
-                                <li>Twitter</li>
-                                <li>GitHub</li>
-                                <li>Discord</li>
-                            </ul>
-                        </div>
+            <footer className="relative z-10 border-t border-white/10 bg-black pb-6">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-6 border-t border-white/5">
+                        <p className="text-xs text-zinc-200 pl-4">Developed by Nishant Bhardwaj</p>
+                        <p className="text-xs text-zinc-200 pr-4">© 2026 FinAIze Inc. All rights reserved.</p>
                     </div>
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/5">
-                        <div className="flex items-center gap-2">
-                            <div className="h-5 w-5 rounded bg-cyan-600" />
-                            <span className="font-bold text-lg text-white">FinAIze</span>
-                        </div>
-                        <p className="text-xs text-zinc-600">© 2026 FinAIze Inc. All rights reserved.</p>
-                    </div>
-                </div>
             </footer>
 
         </div>

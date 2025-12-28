@@ -9,15 +9,15 @@ export function Navbar() {
 
     const navLinks = [
         { name: 'Home', href: '#' },
+        { name: 'Features', href: '#features' },
         { name: 'About', href: '#about' },
-        { name: 'Testimonials', href: '#testimonials' },
         { name: 'Contact', href: '#contact' },
     ]
 
     return (
         <div className="fixed top-0 left-0 right-0 z-[100] flex justify-center w-full">
             <nav
-                className="flex items-center justify-between px-6 py-4 w-full bg-black/40 backdrop-blur-xl border-b border-white/5"
+                className="flex items-center justify-between px-6 py-4 w-full bg-black/40 backdrop-blur-xl"
             >
                 {/* Logo */}
                 <div className="flex items-center gap-2">
