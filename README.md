@@ -55,9 +55,9 @@
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nishant2864&show_icons=true&theme=tokyonight&hide_border=true" alt="Nishant's GitHub Stats" />
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nishant2864&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+  <img src="https://img.shields.io/github/repo-size/nishant2864/FinAize-FinancialAssistant?style=for-the-badge&color=blue" alt="Repo Size" />
+  <img src="https://img.shields.io/github/last-commit/nishant2864/FinAize-FinancialAssistant?style=for-the-badge&color=orange" alt="Last Commit" />
+  <img src="https://img.shields.io/github/commit-activity/m/nishant2864/FinAize-FinancialAssistant?style=for-the-badge&color=yellow" alt="Commit Activity" />
 </div>
 
 ---
