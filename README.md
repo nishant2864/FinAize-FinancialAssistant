@@ -3,7 +3,7 @@
 
   <!-- Typewriter Effect Title -->
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=33E6FF&center=true&vCenter=true&width=500&lines=FinAIze+-+AI+Financial+Assistant;Your+Personal+Finance+Companion;Powered+by+Next.js+%26+OpenAI" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&duration=3000&pause=1000&color=33E6FF&center=true&vCenter=true&width=800&lines=FinAIze+-+AI+Powered+Financial+Assistant;Your+Personal+Finance+Companion" alt="Typing SVG" />
   </a>
 
   <p align="center">
@@ -12,9 +12,6 @@
 
   <!-- Badges -->
   <p align="center">
-    <a href="https://github.com/nishant2864/FinAize-FinancialAssistant/graphs/contributors">
-      <img src="https://img.shields.io/github/contributors/nishant2864/FinAize-FinancialAssistant?style=for-the-badge&color=blue" alt="Contributors" />
-    </a>
     <a href="https://github.com/nishant2864/FinAize-FinancialAssistant/network/members">
       <img src="https://img.shields.io/github/forks/nishant2864/FinAize-FinancialAssistant?style=for-the-badge&color=orange" alt="Forks" />
     </a>
@@ -24,9 +21,9 @@
     <a href="https://github.com/nishant2864/FinAize-FinancialAssistant/issues">
       <img src="https://img.shields.io/github/issues/nishant2864/FinAize-FinancialAssistant?style=for-the-badge&color=red" alt="Issues" />
     </a>
-    <a href="https://github.com/nishant2864/FinAize-FinancialAssistant/blob/main/LICENSE">
+    <!-- <a href="https://github.com/nishant2864/FinAize-FinancialAssistant/blob/main/LICENSE">
       <img src="https://img.shields.io/github/license/nishant2864/FinAize-FinancialAssistant?style=for-the-badge&color=green" alt="License" />
-    </a>
+    </a> -->
   </p>
 </div>
 
