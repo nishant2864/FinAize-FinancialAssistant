@@ -40,7 +40,7 @@ export default function Home() {
                         className="inline-flex items-center rounded-full border border-cyan-500/30 bg-cyan-950/30 px-4 py-1.5 text-sm text-cyan-400 mb-8 backdrop-blur-md"
                     >
                         <span className="flex h-2 w-2 rounded-full bg-cyan-500 mr-2 animate-pulse shadow-[0_0_10px_#06b6d4]" />
-                        Your Personal <span className="text-white ml-1 font-bold">Financial Assistant</span>
+                        status: <span className="text-white ml-1 font-bold">actively assisting</span>
                     </motion.div>
 
                     <motion.h1
